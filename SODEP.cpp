@@ -2,28 +2,23 @@
 
 using namespace std;
 
-int tongChuSo(int x)
+int main()
 {
-	int s = 0;
-
-	while(x != 0)
-	{
-		s += x%10;
-		x /= 10;
-	}
-
-	return s;
-}
-
-int main() {
-	int n;
+	long n = 0, m = 0, s = 0;
 	cin>>n;
 
-	if(tongChuSo(n)%10 == 9)
+	m = n;
+	while(m != 0)
+	{
+		s += m%10;
+		m /= 10;
+	}
+
+	if(s == 9 || s%10 == 9)
 		cout<<"YES";
 	else
 		cout<<"NO";
 
-    return 0;
+	return 0;
 }
 
